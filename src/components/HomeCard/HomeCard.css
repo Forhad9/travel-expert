@@ -1,6 +1,7 @@
-.cards {
+.cards{
     margin-top: 100px;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .card-img-top {

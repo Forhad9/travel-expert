@@ -1,28 +1,31 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
+    
     return (
         <div>
-            <Navbar>
-                <Navbar.Brand href="#home">Travel Experts</Navbar.Brand>
+            <Navbar className="container">
+                <Navbar.Brand>Travel Experts</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
-                    <Nav className="justify-content-end" activeKey="/home">
+                    <Nav className="justify-content-end">
                         <Nav.Item>
-                            <Nav.Link href="/home">Home</Nav.Link>
+                            <Nav.Link><Link to="/home">Home</Link></Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href="/destination">Destination</Nav.Link>
+                            <Nav.Link><Link to="/destination">Destination</Link></Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href="/blog">Blog</Nav.Link>
+                            <Nav.Link href="#">Blog</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href="/contact">Contact</Nav.Link>
+                            <Nav.Link href="#">Contact</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href="/login" style={{color: 'orange'}}>Login</Nav.Link>
+                            <Nav.Link style={{color: 'orange'}}><Link to="/login">Login</Link></Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>

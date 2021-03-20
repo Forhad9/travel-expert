@@ -4,16 +4,16 @@ import { useEffect } from 'react';
 import fakeData from '../../FakeData/data.json';
 import { useState } from 'react';
 import HomeCard from '../HomeCard/HomeCard';
+import bg from '../../images/Bg.png'
 
 
 const HomePage = () => {
     const [cards, setCard] = useState([]);
     useEffect(() => {
         setCard(fakeData);
-        console.log(fakeData);
     }, [])
     return (
-        <div className="container">
+        <div className="container"  styles={{ backgroundImage:`url(${bg})` }}>
             <div className="text-center">
                 <div className="row mr-3">
                     {   
