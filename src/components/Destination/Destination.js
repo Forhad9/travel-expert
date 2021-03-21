@@ -1,24 +1,34 @@
 import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
 import { useParams } from 'react-router';
-import fakeData from '../../FakeData/data.json';
+import Map from '../GoogleMap/Map';
+import './Destination.css';
 
 const Destination = () => {
 
-    // const [vehicle, setVehicle] = useState([]);
-
-    // const {destinationId} = useParams();
-
-    // useEffect(() => {
-    //     setVehicle(fakeData);
-    //     console.log(fakeData);
-    // }, [])
-
+    const { destinationId } = useParams();
 
     return (
         <div>
-            <h1>hihfhsd</h1>
+            
+            <div >
+                <fieldset>
+                    <div>
+                        <label htmlFor="pickfrom">Pick From</label>
+                        <input type="text" />
+                    </div>
+                    <br />
+                    <div>
+                        <label htmlFor="pickto">Pick To</label>
+                        <input type="text" />
+                    </div>
+                    <div>
+                        <button type="submit">Search</button>
+                    </div>
+                </fieldset>
+            </div>
+            <div className="map-position">
+                <Map />
+            </div>
         </div>
     );
 };

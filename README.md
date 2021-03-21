@@ -16,3 +16,6 @@
 
 # Login component
 -created google authentication through firebase
+
+# Bonus
+- added map, a little bit responsive

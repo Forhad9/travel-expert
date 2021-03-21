@@ -19,10 +19,10 @@ const Header = () => {
                             <Nav.Link><Link to="/destination">Destination</Link></Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href="#">Blog</Nav.Link>
+                            <Nav.Link>Blog</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href="#">Contact</Nav.Link>
+                            <Nav.Link>Contact</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link style={{color: 'orange'}}><Link to="/login">Login</Link></Nav.Link>

@@ -17,12 +17,7 @@ import { createContext } from 'react';
 import { useState } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
-
 export const UserContext = createContext();
-
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -31,17 +26,17 @@ function App() {
       <Router>
         <Header></Header>
         <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
           <Route path="/home">
             <HomePage />
           </Route>
-          <PrivateRoute path="destination/:destinationId">
-            <Destination></Destination>
-          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <PrivateRoute path="/destination/:destinationId">
+            <Destination></Destination>
+          </PrivateRoute>
+          <Route exact path="/">
+            <HomePage />
           </Route>
         </Switch>
       </Router>
